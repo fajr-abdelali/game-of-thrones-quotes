@@ -7,6 +7,7 @@ import { HousesComponent } from './component/houses/houses.component';
 import { PersonsComponent } from './component/persons/persons.component';
 import { QuotesComponent } from './component/quotes/quotes.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './component/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
