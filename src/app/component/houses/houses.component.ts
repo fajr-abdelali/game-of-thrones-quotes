@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HouseService } from 'src/app/service/house.service';
+
 
 @Component({
   selector: 'app-houses',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./houses.component.scss']
 })
 export class HousesComponent {
+  
+
+  
 
 }

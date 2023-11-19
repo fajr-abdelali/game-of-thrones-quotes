@@ -1,0 +1,5 @@
+<ul class="list-group" *ngFor="let house of houses">
+    <li class="list-group-item" [id]="house.slug">
+        <a class="nav-link" [routerLink]="['/house',house.slug]"> {{ house.name }} </a>
+    </li>
+</ul>

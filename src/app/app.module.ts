@@ -7,7 +7,9 @@ import { HousesComponent } from './component/houses/houses.component';
 import { PersonsComponent } from './component/persons/persons.component';
 import { QuotesComponent } from './component/quotes/quotes.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { HouseListComponent } from './component/houses/house-list/house-list.component';
+import { HouseMembersComponent } from './component/houses/house-members/house-members.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http'
     HousesComponent,
     PersonsComponent,
     QuotesComponent,
-    NavbarComponent
+    NavbarComponent,
+    HouseListComponent,
+    HouseMembersComponent
   ],
   imports: [
     BrowserModule,

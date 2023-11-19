@@ -1,4 +1,4 @@
-interface Character {
+export interface Character {
   name: string;
   slug: string;
   house: {
@@ -8,7 +8,7 @@ interface Character {
   quotes: string[];
 }
 
-interface House {
+export interface House {
   slug: string;
   name: string;
   members: {
@@ -17,7 +17,7 @@ interface House {
   }[];
 }
 
-interface Quote {
+export interface Quote {
   sentence: string;
   character: {
     name: string;
