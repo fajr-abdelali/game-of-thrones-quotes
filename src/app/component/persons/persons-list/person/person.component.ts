@@ -15,7 +15,7 @@ export class PersonComponent implements OnInit {
   constructor(private personsService: PersonsService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.router.params.subscribe(params => this.slug = params['slug']);
+    this.slug = this.router.snapshot.params['slug'];
     console.log(this.slug)
     this.personsService.getPersonBySlug(this.slug).subscribe(characetr => this.character = characetr[0])
   }
