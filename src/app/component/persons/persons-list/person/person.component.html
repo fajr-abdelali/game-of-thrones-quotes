@@ -3,12 +3,13 @@
     <label for="house">house</label><input name="house" type="text" readonly [value]="character.house?.name">
 
 
-    <h5>Quotes</h5>
+    <h5>Quotes</h5><button class="btn" (click)="loadMoreQuotes()">Load More Quotes</button>
+
     <ul class="list-group" *ngFor="let quote of character.quotes">
         <li class="list-group-item">
             <blockquote class="blockquote mb-0">
                 <p> {{ quote }} </p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                <footer class="blockquote-footer"> <cite title="Source Title"> {{ character.name }} </cite>
                 </footer>
             </blockquote>
         </li>
