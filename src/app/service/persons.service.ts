@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { Character } from '../interface/GameOfThrones.interface';
 
 @Injectable({
@@ -14,11 +14,21 @@ export class PersonsService {
 
   getPersons(): Observable<Character[]> {
     const charactersUrl = `${this.apiUrl}/characters`;
-    return this.http.get<Character[]>(charactersUrl);
+    return this.http.get<Character[]>(charactersUrl).pipe(
+      catchError((error: any) => {
+        console.log('Error fetching Characters', error);
+        return of([]);
+      })
+    );
   }
 
   getPersonBySlug(slug: string): Observable<Character[]> {
     const characterUrl = `${this.apiUrl}/character/${slug}`;
-    return this.http.get<Character[]>(characterUrl);
+    return this.http.get<Character[]>(characterUrl).pipe(
+      catchError((error: any) => {
+        console.log('Error fetching Character', error);
+        return of([]);
+      })
+    );
   }
 }
