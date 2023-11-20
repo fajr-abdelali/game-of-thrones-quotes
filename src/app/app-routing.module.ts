@@ -4,12 +4,14 @@ import { HousesComponent } from './component/houses/houses.component';
 import { PersonsComponent } from './component/persons/persons.component';
 import { QuotesComponent } from './component/quotes/quotes.component';
 import { HouseMembersComponent } from './component/houses/house-members/house-members.component';
+import { PersonComponent } from './component/persons/persons-list/person/person.component';
 
 const routes: Routes = [
-  {path:'houses',component:HousesComponent},
-  {path:'members/:slug',component:HouseMembersComponent},
-  {path:'persons',component:PersonsComponent},
-  {path:'quotes',component:QuotesComponent},
+  { path: 'houses', component: HousesComponent },
+  { path: 'members/:slug', component: HouseMembersComponent },
+  { path: 'persons', component: PersonsComponent, },
+  { path: 'persons/:slug', component: PersonComponent },
+  { path: 'quotes', component: QuotesComponent },
 ];
 
 @NgModule({

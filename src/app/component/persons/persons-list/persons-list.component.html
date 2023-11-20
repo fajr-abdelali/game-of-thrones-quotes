@@ -1,0 +1,6 @@
+<input type="text" #search [(ngModel)]="searchText" (input)="onSearch()" placeholder="Search houses">
+<ul class="list-group" *ngFor="let character of filtredCharacter">
+    <li class="list-group-item" [id]="character.slug">
+        <a class="nav-link" [routerLink]="['/persons',character.slug]"> {{ character.name }} <span class="badge bg-secondary"> {{ character.house?.name }} </span> </a>
+    </li>
+</ul>

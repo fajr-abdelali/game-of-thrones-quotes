@@ -16,7 +16,6 @@ export class HouseMembersComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.slug = params['slug'];
-      console.log(this.slug)
     });
     this.houseService.getHouseBySlug(this.slug).subscribe((house: House[]) => {
       this.house = house[0];

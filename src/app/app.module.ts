@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HouseListComponent } from './component/houses/house-list/house-list.component';
 import { HouseMembersComponent } from './component/houses/house-members/house-members.component';
 import { FormsModule } from '@angular/forms';
+import { PersonsListComponent } from './component/persons/persons-list/persons-list.component';
+import { PersonComponent } from './component/persons/persons-list/person/person.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     QuotesComponent,
     NavbarComponent,
     HouseListComponent,
-    HouseMembersComponent
+    HouseMembersComponent,
+    PersonsListComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
