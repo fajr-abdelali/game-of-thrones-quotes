@@ -13,6 +13,7 @@ import { HouseMembersComponent } from './component/houses/house-members/house-me
 import { FormsModule } from '@angular/forms';
 import { PersonsListComponent } from './component/persons/persons-list/persons-list.component';
 import { PersonComponent } from './component/persons/persons-list/person/person.component';
+import { QuotesListComponent } from './component/quotes/qoutes-list/quotes-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PersonComponent } from './component/persons/persons-list/person/person.
     HouseListComponent,
     HouseMembersComponent,
     PersonsListComponent,
-    PersonComponent
+    PersonComponent,
+    QuotesListComponent
   ],
   imports: [
     BrowserModule,
