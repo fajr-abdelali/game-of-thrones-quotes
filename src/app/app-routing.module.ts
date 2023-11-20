@@ -6,7 +6,8 @@ import { QuotesComponent } from './component/quotes/quotes.component';
 import { HouseMembersComponent } from './component/houses/house-members/house-members.component';
 
 const routes: Routes = [
-  {path:'houses',component:HousesComponent,children:[{path:'member',component:HouseMembersComponent}]},
+  {path:'houses',component:HousesComponent},
+  {path:'members/:slug',component:HouseMembersComponent},
   {path:'persons',component:PersonsComponent},
   {path:'quotes',component:QuotesComponent},
 ];

@@ -9,7 +9,8 @@ import { QuotesComponent } from './component/quotes/quotes.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HouseListComponent } from './component/houses/house-list/house-list.component';
-import { HouseMembersComponent } from './component/houses/house-members/house-members.component'
+import { HouseMembersComponent } from './component/houses/house-members/house-members.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HouseMembersComponent } from './component/houses/house-members/house-me
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { House } from '../interface/GameOfThrones.service';
+import { House } from '../interface/GameOfThrones.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +12,13 @@ export class HouseService {
 
   constructor(private http: HttpClient) { }
 
-  getHouses(): Observable<any[]> {
+  getHouses(): Observable<House[]> {
     const houseUrl = `${this.apiUrl}/houses`;
     return this.http.get<House[]>(houseUrl);
   }
 
-  getHouseBySlug(slug: string): Observable<any> {
-    const houseUrl = `${this.apiUrl}/houses/${slug}`;
-    return this.http.get<House>(houseUrl);
+  getHouseBySlug(slug: string): Observable<House[]> {
+    const houseUrl = `${this.apiUrl}/house/${slug}`;
+    return this.http.get<House[]>(houseUrl);
   }
 }

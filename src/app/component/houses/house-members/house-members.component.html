@@ -1,1 +1,5 @@
-<p>house-members works!</p>
+<ul class="list-group" *ngFor="let member of house?.members">
+    <li class="list-group-item" [id]="member.slug">
+        <a class="nav-link" [routerLink]="['/members',member.slug]"> {{ member.name }} </a>
+    </li>
+</ul>
