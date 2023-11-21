@@ -1,6 +1,16 @@
-<input type="text" #search [(ngModel)]="searchText" (input)="onSearch()" placeholder="Search houses">
-<ul class="list-group" *ngFor="let character of filtredCharacter">
-    <li class="list-group-item" [id]="character.slug">
-        <a class="nav-link" [routerLink]="['/persons',character.slug]"> {{ character.name }} <span class="badge bg-secondary"> {{ character.house?.name }} </span> </a>
-    </li>
-</ul>
+<div class="container-fluid">
+
+    <div class="col-4 mb-3">
+        <input type="text" class="form-control search" #search [(ngModel)]="searchText" (input)="onSearch()"
+            placeholder="Search persons">
+    </div>
+
+    <ul class="list-group" *ngFor="let character of filtredCharacter">
+        <li class="list-group-item" [id]="character.slug">
+            <a class="nav-link" [routerLink]="['/persons',character.slug]"> {{ character.name }}
+                <span *ngIf="character.house?.name" class="badge bg-secondary float-end"> {{ character.house?.name }}
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

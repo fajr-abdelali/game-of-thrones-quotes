@@ -1,4 +1,4 @@
-<input (click)="initSubscription()" class="btn btn-outline-secondary" type="button" value="get  random Quotes">
+<input (click)="initSubscription()" class="btn btn-outline-secondary" type="button" value="get random Quotes">
 <ul class="list-group" *ngFor="let quote of quotes">
     <li class="list-group-item" [id]="quote.character.slug">
         <a class="nav-link" [routerLink]="['/persons',quote.character.slug]"> {{ quote.sentence }} </a>

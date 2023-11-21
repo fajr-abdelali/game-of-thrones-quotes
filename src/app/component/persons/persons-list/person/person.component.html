@@ -1,12 +1,27 @@
 <div *ngIf="character">
-    <label for="name">name</label><input name="name" type="text" readonly [value]="character.name">
-    <label for="house">house</label><input name="house" type="text" readonly [value]="character.house?.name">
 
+    <div class="row">
+        <div class="col-md-6">
+            <label for="name" class="form-label">name</label>
+            <input name="name" class="form-control" type="text" readonly [value]="character.name">
+        </div>
 
-    <h5>Quotes</h5><button class="btn" (click)="loadMoreQuotes()">Load More Quotes</button>
+        <div class="col-md-6" *ngIf="character.house?.name">
+            <label for="house" class="form-label">house</label>
+            <input name="house" class="form-control" type="text" readonly [value]="character.house?.name">
+        </div>
+    </div>
 
-    <ul class="list-group" *ngFor="let quote of character.quotes">
-        <li class="list-group-item">
+    <h5 class="mt-3">Quotes</h5>
+    
+    <div class="row mb-3">
+        <div class="col">
+            <button class="btn btn-outline-secondary float-end" (click)="loadMoreQuotes()">Load More Quotes</button>
+        </div>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let quote of character.quotes">
             <blockquote class="blockquote mb-0">
                 <p> {{ quote }} </p>
                 <footer class="blockquote-footer"> <cite title="Source Title"> {{ character.name }} </cite>

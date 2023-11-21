@@ -1,6 +1,14 @@
-<input type="text" #search [(ngModel)]="searchText" (input)="onSearch()" placeholder="Search houses">
-<ul class="list-group" *ngFor="let house of filteredHouses">
-    <li class="list-group-item" [id]="house.slug">
-        <a class="nav-link" [routerLink]="['/members',house.slug]"> {{ house.name }} </a>
-    </li>
-</ul>
+<div class="container-fluid">
+
+    <div class="col-4 mb-3">
+        <input type="text" class="form-control" #search [(ngModel)]="searchText" (input)="onSearch()"
+            placeholder="Search houses">
+    </div>
+
+
+    <ul class="list-group" *ngFor="let house of filteredHouses">
+        <li class="list-group-item" [id]="house.slug">
+            <a class="nav-link" [routerLink]="['/members',house.slug]"> {{ house.name }} </a>
+        </li>
+    </ul>
+</div>
