@@ -1,0 +1,10 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100wh;
+    h1 {
+        font-family: 'got';
+    }
+}
